@@ -2,6 +2,10 @@
 
 記錄、保存與推廣台灣當代音樂創作的數位平台 Demo。
 
+[HomePage Demo](https://juchengb.github.io/tw-composer-database/inedx.html) 
+
+[Composer Demo](https://juchengb.github.io/tw-composer-database/anniwei.html) 
+
 ---
 
 ## 專案說明
@@ -16,7 +20,7 @@
 ## 目錄結構
 
 ```
-composer-portfolio/
+tw-composer-database/
 ├── inedx.html          # 首頁（注意檔名為 inedx，可自行改為 index.html）
 ├── anniwei.html        # 作曲家範例頁：魏安妮
 ├── README.md
