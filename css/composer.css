@@ -1,0 +1,649 @@
+/* ===================================
+   SECTION: Hero / Composer Intro
+   =================================== */
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 2rem 5%;
+    background: linear-gradient(135deg, var(--color-bg) 0%, #F5F5F0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(158, 179, 128, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-content {
+    z-index: 2;
+    padding-left: 2rem;
+}
+
+.hero-label {
+    display: inline-block;
+    font-size: 0.8125rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1rem;
+}
+
+.hero h1 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    color: var(--color-text-light);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-display);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 540px;
+    margin-bottom: 3rem;
+    color: var(--color-text-light);
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 2px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 20px rgba(176, 81, 69, 0.2);
+}
+
+.hero-cta:hover {
+    background-color: #963D34;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(176, 81, 69, 0.3);
+}
+
+.hero-image-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow:
+        20px 20px 0 rgba(62, 101, 92, 0.15),
+        -10px -10px 0 rgba(206, 181, 161, 0.2);
+    transition: var(--transition-smooth);
+}
+
+.hero-image:hover {
+    transform: translate(-5px, -5px);
+}
+
+/* ===================================
+   SECTION: About the Composer
+   =================================== */
+.about {
+    background-color: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.section-label {
+    font-size: 0.8125rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-weight: 600;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-right: 2rem;
+}
+
+.about-content h2 {
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+.about-text {
+    margin-top: 3rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.about-text p {
+    color: var(--color-text-light);
+}
+
+.credentials {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--color-bg);
+    border-left: 4px solid var(--color-secondary);
+}
+
+.credentials h3 {
+    color: var(--color-primary);
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.credentials ul {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.credentials li {
+    color: var(--color-text-light);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.credentials li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* ===================================
+   SECTION: Selected Scores (PDF Preview)
+   =================================== */
+.scores {
+    background: linear-gradient(180deg, white 0%, var(--color-bg) 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.scores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.score-item {
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.score-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.score-preview {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, #F5F5F0 0%, #E8E8E0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Simulated PDF with watermark */
+.score-preview::before {
+    content: 'SAMPLE\ASCORE';
+    position: absolute;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(62, 101, 92, 0.08);
+    transform: rotate(-45deg);
+    letter-spacing: 0.2em;
+    z-index: 1;
+}
+
+.score-preview-image {
+    width: 85%;
+    height: 85%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.score-preview-placeholder {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.score-info {
+    padding: 2rem;
+}
+
+.score-info h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.score-meta {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.score-description {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.watermark-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(176, 81, 69, 0.1);
+    color: var(--color-accent);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+/* ===================================
+   SECTION: Video Works (YouTube)
+   =================================== */
+.videos {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.videos .section-header h2 {
+    color: white;
+}
+
+.videos .section-header p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+}
+
+.video-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.video-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    padding: 2rem;
+}
+
+.video-info h3 {
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.video-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+}
+
+/* ===================================
+   SECTION: Audio Works (SoundCloud)
+   =================================== */
+.audio {
+    background-color: white;
+}
+
+.audio-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+.audio-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--color-bg);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+}
+
+.audio-item:nth-child(even) {
+    grid-template-columns: 2fr 1fr;
+}
+
+.audio-item:nth-child(even) .audio-embed {
+    order: 1;
+}
+
+.audio-item:nth-child(even) .audio-info {
+    order: 2;
+}
+
+.audio-item:hover {
+    background-color: rgba(158, 179, 128, 0.1);
+}
+
+.audio-info h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.audio-meta {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.audio-description {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.audio-embed iframe {
+    width: 100%;
+    height: 166px;
+    border-radius: 2px;
+}
+
+/* ===================================
+   SECTION: Performances / Events
+   =================================== */
+.performances {
+    background: linear-gradient(180deg, white 0%, var(--color-bg) 100%);
+}
+
+.performances-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+}
+
+.performance-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 2px;
+    border-left: 4px solid var(--color-secondary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.performance-item.upcoming {
+    border-left-color: var(--color-accent);
+}
+
+.performance-item.past {
+    border-left-color: var(--color-muted);
+    opacity: 0.85;
+}
+
+.performance-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.performance-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border-radius: 2px;
+    height: fit-content;
+}
+
+.performance-date .month {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.performance-date .day {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+    margin: 0.25rem 0;
+    font-family: var(--font-display);
+}
+
+.performance-date .year {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+.performance-content h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.375rem;
+}
+
+.performance-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.upcoming-badge {
+    background-color: rgba(176, 81, 69, 0.1);
+    color: var(--color-accent);
+}
+
+.past-badge {
+    background-color: rgba(121, 140, 164, 0.1);
+    color: var(--color-muted);
+}
+
+.performance-venue {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--color-secondary);
+}
+
+.performance-venue strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.performance-description {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.performance-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: var(--transition-smooth);
+}
+
+.performance-link:hover {
+    gap: 0.75rem;
+    color: var(--color-primary);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 4rem 5%;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .section-label {
+        writing-mode: horizontal-tb;
+        transform: none;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .audio-item,
+    .audio-item:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .audio-item:nth-child(even) .audio-embed,
+    .audio-item:nth-child(even) .audio-info {
+        order: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .header-container {
+        padding: 1rem 5%;
+    }
+
+    .site-logo h1 {
+        font-size: 1.125rem;
+    }
+
+    .site-logo .logo-subtitle {
+        font-size: 0.6rem;
+    }
+
+    .scores-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .performance-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .performance-date {
+        width: 100px;
+        margin: 0 auto;
+    }
+}
