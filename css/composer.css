@@ -51,7 +51,6 @@
     color: var(--color-text-light);
     font-weight: 300;
     margin-bottom: 3rem;
-    font-family: var(--font-display);
     font-style: italic;
 }
 
@@ -263,7 +262,6 @@
 }
 
 .score-preview-placeholder {
-    font-family: var(--font-display);
     font-size: 1.25rem;
     color: var(--color-text-light);
     text-align: center;

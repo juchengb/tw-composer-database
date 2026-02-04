@@ -12,7 +12,6 @@
     --color-text: #2A2A2A;
     --color-text-light: #5A5A5A;
 
-    --font-display: 'Montserrat', 'Noto Sans TC', sans-serif, 'Playfair Display', 'Noto Serif TC', serif;
     --font-body: 'Montserrat', 'Noto Sans TC', sans-serif;
     --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -48,7 +47,6 @@ body {
    Typography
    =================================== */
 h1, h2, h3 {
-    font-family: var(--font-display);
     font-weight: 600;
     line-height: 1.2;
 }
@@ -173,7 +171,6 @@ a {
     color: white;
     font-weight: 700;
     font-size: 1.75rem;
-    font-family: var(--font-display);
 }
 
 .site-header.scrolled .logo-icon {
@@ -200,7 +197,6 @@ a {
 }
 
 .logo-text .logo-subtitle {
-    font-family: var(--font-body);
     color: rgba(255, 255, 255, 0.95);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -222,7 +218,6 @@ a {
 }
 
 .main-nav a {
-    font-family: var(--font-body);
     font-size: 1.25rem;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.95);
