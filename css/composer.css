@@ -31,7 +31,7 @@
 
 .hero-label {
     display: inline-block;
-    font-size: 0.8125rem;
+    font-size: 1.2rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-primary);
@@ -43,14 +43,14 @@
 
 .hero h1 {
     color: var(--color-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    font-size: 1.5rem;
     color: var(--color-text-light);
     font-weight: 300;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     font-family: var(--font-display);
     font-style: italic;
 }
@@ -116,7 +116,7 @@
 }
 
 .section-label {
-    font-size: 0.8125rem;
+    font-size: 1.25rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-primary);
@@ -162,7 +162,6 @@
 
 .credentials h3 {
     color: var(--color-primary);
-    font-size: 1.125rem;
     margin-bottom: 1rem;
 }
 
@@ -287,7 +286,6 @@
 
 .score-description {
     color: var(--color-text-light);
-    font-size: 0.875rem;
     line-height: 1.6;
 }
 
@@ -297,7 +295,6 @@
     padding: 0.5rem 1rem;
     background-color: rgba(176, 81, 69, 0.1);
     color: var(--color-accent);
-    font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -366,7 +363,6 @@
 
 .video-info p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.875rem;
 }
 
 /* ===================================
@@ -411,10 +407,10 @@
 .audio-info h3 {
     color: var(--color-primary);
     margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .audio-meta {
-    font-size: 0.8125rem;
     color: var(--color-text-light);
     margin-bottom: 1.5rem;
     font-style: italic;
@@ -431,143 +427,6 @@
     border-radius: 2px;
 }
 
-/* ===================================
-   SECTION: Performances / Events
-   =================================== */
-.performances {
-    background: linear-gradient(180deg, white 0%, var(--color-bg) 100%);
-}
-
-.performances-timeline {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    gap: 3rem;
-}
-
-.performance-item {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 2.5rem;
-    padding: 2.5rem;
-    background-color: white;
-    border-radius: 2px;
-    border-left: 4px solid var(--color-secondary);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transition: var(--transition-smooth);
-    position: relative;
-}
-
-.performance-item.upcoming {
-    border-left-color: var(--color-accent);
-}
-
-.performance-item.past {
-    border-left-color: var(--color-muted);
-    opacity: 0.85;
-}
-
-.performance-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.performance-date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--color-bg);
-    border-radius: 2px;
-    height: fit-content;
-}
-
-.performance-date .month {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.performance-date .day {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 1;
-    margin: 0.25rem 0;
-    font-family: var(--font-display);
-}
-
-.performance-date .year {
-    font-size: 0.8125rem;
-    color: var(--color-text-light);
-    font-weight: 500;
-}
-
-.performance-content h3 {
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-    font-size: 1.375rem;
-}
-
-.performance-badge {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.upcoming-badge {
-    background-color: rgba(176, 81, 69, 0.1);
-    color: var(--color-accent);
-}
-
-.past-badge {
-    background-color: rgba(121, 140, 164, 0.1);
-    color: var(--color-muted);
-}
-
-.performance-venue {
-    color: var(--color-text-light);
-    font-size: 0.875rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-    border-left: 2px solid var(--color-secondary);
-}
-
-.performance-venue strong {
-    color: var(--color-primary);
-    font-weight: 600;
-}
-
-.performance-description {
-    color: var(--color-text-light);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-}
-
-.performance-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 0.875rem;
-    transition: var(--transition-smooth);
-}
-
-.performance-link:hover {
-    gap: 0.75rem;
-    color: var(--color-primary);
-}
 
 /* ===================================
    Responsive Design

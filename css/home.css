@@ -43,7 +43,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50px;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 600;
@@ -71,7 +71,6 @@
 }
 
 .hero-subtitle {
-    font-size: clamp(1.125rem, 2.2vw, 1.5rem);
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
     margin-bottom: 3rem;
@@ -96,7 +95,7 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     transition: var(--transition-smooth);
-    font-size: 0.9375rem;
+    font-size: 1.25rem;
 }
 
 .btn-primary {
@@ -130,7 +129,7 @@
     left: 50%;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.8125rem;
+    font-size: 1.25rem;
     letter-spacing: 0.1em;
     animation: bounce 2s infinite;
 }
@@ -153,7 +152,7 @@
 }
 
 .section-label {
-    font-size: 0.8125rem;
+    font-size: 1.25rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-accent);
@@ -210,18 +209,18 @@
 .composer-info h3 {
     color: var(--color-primary);
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
-.composer-name-en {
-    font-size: 0.9375rem;
+.composer-name-zh {
+    font-size: 1.25rem;
     color: var(--color-text-light);
     font-style: italic;
     margin-bottom: 1rem;
 }
 
 .composer-specialty {
-    font-size: 0.8125rem;
+    font-size: 1.1rem;
     color: var(--color-accent);
     font-weight: 600;
     margin-bottom: 1rem;
@@ -230,7 +229,7 @@
 
 .composer-description {
     color: var(--color-text-light);
-    font-size: 0.875rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -241,7 +240,7 @@
     gap: 0.5rem;
     color: var(--color-primary);
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 1.25rem;
     transition: var(--transition-smooth);
 }
 
@@ -270,7 +269,7 @@
 }
 
 .stat-number {
-    font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+    font-size: clamp(3rem, 4vw, 4rem);
     font-weight: 700;
     color: var(--color-tertiary);
     font-family: var(--font-display);
@@ -279,7 +278,7 @@
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
     letter-spacing: 0.05em;
 }
@@ -334,19 +333,18 @@
     justify-content: center;
     flex-shrink: 0;
     color: white;
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .feature-content h3 {
     color: var(--color-primary);
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .feature-content p {
     color: var(--color-text-light);
-    font-size: 0.875rem;
 }
 
 .about-image {
@@ -372,7 +370,7 @@
 }
 
 .cta-section p {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 3rem;
     max-width: 700px;
