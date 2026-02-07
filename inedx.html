@@ -13,8 +13,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home.css">
-    <script src="./js/main.js"></script>
-    <script src="./js/home.js"></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/home.js" defer></script>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
                 <div class="logo-icon">TW</div>
                 <div class="logo-text">
                     <h1>Play the Present</h1>
-                    <span class="logo-subtitle">TAIWAN COMPSER DATABASE</span>
+                    <span class="logo-subtitle">TAIWAN COMPOSER DATABASE</span>
                 </div>
             </a>
 
@@ -51,6 +51,11 @@
          SECTION: Hero
          =================================== -->
     <section id="home" class="hero">
+        <div class="hero-bg-slides" id="heroBgSlides" aria-hidden="true">
+            <div class="hero-bg-slide active" style="background-image: url('./img/home_hero_bg_1.png');"></div>
+            <div class="hero-bg-slide" style="background-image: url('./img/home_hero_bg_2.png');"></div>
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-badge">Preserving Taiwan's Musical Heritage</div>
             <h1>Play the Present<br>TAIWAN COMPSER DATABASE</h1>
@@ -78,7 +83,7 @@
                 <!-- Composer Card 1-->
                 <div class="composer-card">
                     <img 
-                        src="./img/portrait-anniwei.jpg" 
+                        src="./img/portrait-anni.jpg" 
                         alt="魏安妮" 
                         class="composer-image"
                     >
@@ -215,7 +220,7 @@
             <p>If you are a Taiwanese composer or wish to contribute materials to the database, we welcome you to get in touch with us.</p>
             <div class="hero-cta-group">
                 <a href="#" class="btn btn-primary">Contact Us<span>→</span></a>
-                <a href="#" class="btn btn-secondary">Submit Your Works</a>
+                <a href="./upload.html" class="btn btn-secondary">Submit Your Works</a>
             </div>
         </div>
     </section>

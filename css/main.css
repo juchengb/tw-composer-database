@@ -75,6 +75,10 @@ a {
     transition: var(--transition-smooth);
 }
 
+button {
+	font-family: var(--font-body);
+}
+
 /* ===================================
    Utility Classes
    =================================== */

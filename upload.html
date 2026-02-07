@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Works | Play the Present - TAIWAN COMPOSER DATABASE [Demo]</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/upload.css">
+
+    <script src="./js/main.js"></script>
+    <script src="./js/upload.js"></script>
+</head>
+<body class="page-composer page-upload">
+    <!-- ===================================
+         HEADER & NAVIGATION
+         =================================== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#home" class="site-logo">
+                <div class="logo-icon">TW</div>
+                <div class="logo-text">
+                    <h1>Play the Present</h1>
+                    <span class="logo-subtitle">TAIWAN COMPOSER DATABASE</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="./inedx.html">Home</a>
+                <a href="./inedx.html">About Us</a>
+                <a href="./anniwei.html">Composers & Works</a>
+                <a href="./inedx.html">Performances</a>
+            </nav>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================================
+         SECTION: Upload Hero / Intro
+         =================================== -->
+    <section id="home" class="section upload-hero">
+        <div class="container">
+            <div class="upload-hero-text">
+                <div class="upload-hero-label">Submit Your Works</div>
+                <h1>Upload your music and let the present be heard</h1>
+                <p class="upload-hero-subtitle">
+                    Orchestral pieces, wild electroacoustic experiments, or a 3 a.m. sketch –
+                    this is the place to keep a record of the sounds of now.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================
+         SECTION: Upload Form
+         =================================== -->
+    <section id="submit" class="section upload-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Work Submission Form</h2>
+                <p>
+                    The following fields are a demo of the future submission flow.
+                    Nothing will be stored yet, but you can try the full tagging and upload experience.
+                </p>
+            </div>
+
+            <div class="upload-success" id="uploadSuccess" aria-live="polite">
+                <h3>Demo submission complete</h3>
+                <p>
+                    This is a demonstration interface only. In a future version,
+                    your work information will be reviewed and saved into the database.
+                </p>
+            </div>
+
+            <form class="work-upload-form" id="workUploadForm">
+                <div class="form-grid">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="composerName">Composer Name<span class="required">*</span></label>
+                            <input type="text" id="composerName" name="composerName" placeholder="e.g. An-Ni Wei" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="workTitle">Work Title<span class="required">*</span></label>
+                            <input type="text" id="workTitle" name="workTitle" placeholder="e.g. Staring Into the Light" required>
+                        </div>
+
+                        <div class="form-group form-row">
+                            <div>
+                                <label for="year">Year of composition<span class="required">*</span></label>
+                                <input type="text" id="year" name="year" placeholder="2026">
+                            </div>
+                            <div>
+                                <label for="duration">Duration<span class="required">*</span></label>
+                                <input type="text" id="duration" name="duration" placeholder="10'30&quot;">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="instrumentation">Instrumentation<span class="required">*</span></label>
+                            <input type="text" id="instrumentation" name="instrumentation" placeholder="String quartet, live electronics, voice, etc.">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="files">Files<span class="required">*</span></label>
+                            <div class="file-dropzone" id="fileDropzone">
+                                <input
+                                    type="file"
+                                    id="files"
+                                    name="files"
+                                    class="file-input"
+                                    multiple
+                                    accept=".pdf,.mp3,.wav,.aiff,.zip"
+                                >
+                                <div class="file-dropzone-inner">
+                                    <p class="file-dropzone-title">Drag &amp; drop files here</p>
+                                    <p class="file-dropzone-subtitle">or click to browse scores, audio, or ZIP archives</p>
+                                    <p class="file-dropzone-hint">
+                                        Accepted formats: PDF, MP3, WAV, AIFF, ZIP. This is a demo – files will not actually be uploaded.
+                                    </p>
+                                    <ul class="file-list" id="fileList"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="description">Description<span class="required">*</span></label>
+                            <textarea id="description" name="description" rows="7"
+                                      placeholder="Describe the concept, sound world, or the story behind this piece."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="youtubeUrl">YouTube link (optional)</label>
+                            <input type="url" id="youtubeUrl" name="youtubeUrl" placeholder="https://www.youtube.com/watch?v=...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="soundcloudUrl">SoundCloud link (optional)</label>
+                            <input type="url" id="soundcloudUrl" name="soundcloudUrl" placeholder="https://soundcloud.com/...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tags (multiple can be selected)</label>
+
+                            <div class="tag-group-label">Style</div>
+                            <div class="tag-group" data-tag-group="style">
+                                <button type="button" class="tag-pill" data-tag="Experimental">Experimental</button>
+                                <button type="button" class="tag-pill" data-tag="Electroacoustic">Electroacoustic</button>
+                                <button type="button" class="tag-pill" data-tag="Dance">Dance</button>
+                                <button type="button" class="tag-pill" data-tag="Film / Theatre">Film / Theatre</button>
+                                <button type="button" class="tag-pill" data-tag="Minimal">Minimal</button>
+                                <button type="button" class="tag-pill" data-tag="Industrial">Industrial</button>
+                                <button type="button" class="tag-pill" data-tag="Neo-Romantic">Neo-Romantic</button>
+                            </div>
+
+                            <div class="tag-group-label">Vibe</div>
+                            <div class="tag-group" data-tag-group="vibe">
+                                <button type="button" class="tag-pill is-fun" data-tag="Forest">Forest</button>
+                                <button type="button" class="tag-pill is-fun" data-tag="Moonlight">Moonlight</button>
+                                <button type="button" class="tag-pill is-fun" data-tag="Do not listen when sad">Do not listen when sad</button>
+                                <button type="button" class="tag-pill is-fun" data-tag="Finished at 3 a.m.">Finished at 3 a.m.</button>
+                                <button type="button" class="tag-pill is-fun" data-tag="Needs a lot of rehearsal">Needs a lot of rehearsal</button>
+                                <button type="button" class="tag-pill is-fun" data-tag="Conductor may frown">Conductor may frown</button>
+                                <button type="button" class="tag-pill is-fun" data-tag="Easier to play than it looks">Easier to play than it looks</button>
+                            </div>
+
+                            <div class="tag-group-label">Practical info</div>
+                            <div class="tag-group" data-tag-group="practical">
+                                <button type="button" class="tag-pill" data-tag="Flexible instrumentation">Flexible instrumentation</button>
+                                <button type="button" class="tag-pill" data-tag="Electronics required">Electronics required</button>
+                                <button type="button" class="tag-pill" data-tag="Short piece (&lt; 5')">Short piece (&lt; 5')</button>
+                                <button type="button" class="tag-pill" data-tag="Long piece (&gt; 20')">Long piece (&gt; 20')</button>
+                            </div>
+
+                            <input type="hidden" name="tags" id="selectedTagsInput" value="">
+                            <p class="tag-hint">
+                                Selected tags:
+                                <span id="selectedTagsDisplay">—</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-footer">
+                    <p class="form-footer-note">By clicking submit you agree that this is a <strong>demo interface</strong>.</p>
+                    <button type="submit" class="btn btn-primary submit-btn">Submit work</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- ===================================
+         SECTION: Footer
+         =================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Contact and Cooperation</h3>
+            <div class="footer-contact">
+                <a href="">info@twcomposerdb.org</a>
+            </div>
+
+            <div class="footer-note">
+                <p>© 2026 Taiwan Composer Database All Rights Reserved.</p>
+                <p style="margin-top: 1rem;">
+                    All audio-visual materials and musical scores on this website are protected by the composers’ copyrights. Unauthorized reproduction or use is strictly prohibited.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
