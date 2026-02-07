@@ -277,7 +277,6 @@
 }
 
 .score-meta {
-    font-size: 0.8125rem;
     color: var(--color-text-light);
     margin-bottom: 1rem;
 }
@@ -285,6 +284,18 @@
 .score-description {
     color: var(--color-text-light);
     line-height: 1.6;
+}
+
+.score-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.02em;
+}
+
+.score-link:hover {
+    color: var(--color-primary);
 }
 
 .watermark-badge {
@@ -297,6 +308,33 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     border-radius: 2px;
+}
+
+.score-tagline {
+    margin: 1rem 0.5rem 0rem 0.5rem;
+}
+
+.score-tag {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 16px rgba(62, 101, 92, 0.35);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    cursor: default;
+    white-space: nowrap;
+    transition: var(--transition-smooth);
+}
+
+.score-tag:hover {
+    background-color: #2d4a43;
+    transform: translateY(-1px);
 }
 
 /* ===================================
@@ -474,10 +512,6 @@
 
     .site-logo h1 {
         font-size: 1.125rem;
-    }
-
-    .site-logo .logo-subtitle {
-        font-size: 0.6rem;
     }
 
     .scores-grid,

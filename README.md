@@ -7,7 +7,9 @@
 
 [Composer Demo](https://juchengb.github.io/tw-composer-database/anniwei.html) 
 
-[Composer Demo](https://juchengb.github.io/tw-composer-database/upload.html) 
+[Work Demo](https://juchengb.github.io/tw-composer-database/work.html) 
+
+[Submit Work Demo](https://juchengb.github.io/tw-composer-database/upload.html) 
 
 ---
 ## 專案說明
@@ -26,6 +28,7 @@ tw-composer-database/
 ├── inedx.html          # 首頁（注意檔名為 inedx，可自行改為 index.html）
 ├── anniwei.html        # 作曲家範例頁：魏安妮
 ├── upload.html         # 作品上傳頁面
+├── work.html           # 作品範例頁面：Staring Into the Light
 ├── README.md
 ├── css/
 │   ├── main.css        # 全域：變數、reset、header、footer、responsive
